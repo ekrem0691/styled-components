@@ -1,13 +1,21 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { css } from "styled-components";
 
 const StyledLink = styled.a`
-    font-size:1rem;
-    text-decoration:none;
-    color: white;
-    &:hover{
-        opacity: .5;
-    }
-
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    opacity: 0.5;
+  }
+  ${(props) =>
+    props.secondary &&
+    css`
+      background-color: yellow;
+      border-radius: 5px;
+      padding: 0.2rem;
+      color: black;
+    `}
 `;
 
 export default StyledLink;
